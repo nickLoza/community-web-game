@@ -1,0 +1,105 @@
+@use "../../vars/vars.scss" as *;
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+
+.game-container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	height: 80vh;
+	margin: 0 auto;
+	border: 1px solid #000;
+	background-color: #497959;
+	border: 17px solid #1f1f1f;
+	font-family:  "Walter Turncoat";
+	color: $text-color;
+	&__screen{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-title{
+			font-size: 2.8rem;
+		}
+		&-p{
+			font-size: 1.5rem;
+		}
+		&-btn{
+			margin-top: 2.5rem;
+			font:{
+				size: 1.6rem;
+				weight: 600;
+				family:  "Walter Turncoat";
+			}
+			padding: .4rem .7rem;
+			background: none;
+			border: none;
+			transition: transform .1s ease-in-out;
+			cursor: pointer;
+			color: $text-color;
+			border: 2px solid $text-color;
+			border-radius: 17px;
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+		&-gif{
+			height: 300px;
+			width: 90%;
+			object-fit: cover;
+			object-position: top;
+		}
+	}
+	.game{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 100%;
+		margin-top: 7rem;
+		&__title{
+			font-size: 2.5rem;
+		}
+		&__score{
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 2rem;
+			padding: 0 3rem;
+		}
+		&__phrase{
+			font-size: 1.3rem;
+			padding: 0 .2rem;
+			text-align: center;
+			max-width: 700px;
+		}
+		.characters{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 15px;
+			padding: 0 1rem;
+			padding-bottom: 2rem;
+			&__img{
+				height: 130px;
+				cursor: pointer;
+				transition: filter .2s ease-in-out, transform .2s ease-in-out, height .3s ease-in-out;
+				&:hover{
+					filter: brightness(130%);
+					transform: scale(1.2);
+				}
+				@media screen and (max-width: 780px){
+					height: 90px;
+				}
+				@media screen and (max-width: 500px){
+					height: 60px;
+				}
+			}
+		}
+	}
+}

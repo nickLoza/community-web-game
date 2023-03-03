@@ -1,0 +1,8 @@
+@use "./components/layouts/game/game.scss";
+@use "./components/layouts/header/header.scss";
+@use "./components/vars/vars.scss" as *;
+
+body{
+	background-color: $bcg-color;
+
+}
